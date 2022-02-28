@@ -29,15 +29,7 @@ birth_cohort_data <- read_dta(here::here("inputs/data/nchs_cohort_analysis.dta")
 pop_cohort_data <- read_dta(here::here("inputs/data/agecomp-seer.dta"))
 ```
 
-<!-- Possible papers: -->
-<!-- - The Puzzle of Falling US Birth Rates since the Great Recession https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.36.1.151 -->
-<!-- - Who Gets Their First Job at a Large Firm? The Distinct Roles of Education and Skills https://static1.squarespace.com/static/5c870f5194d71a8c5be53ae4/t/609c3108ef87b64561559084/1620848905329/pandp.20211009.pdf -->
-<!-- - Family, Education, and Sources of Wealth among the Richest Americans, 1982-2012 https://www.aeaweb.org/articles?id=10.1257/aer.103.3.158&ArticleSearch%5Bwithin%5D%5Barticletitle%5D=1&ArticleSearch%5Bwithin%5D%5Barticleabstract%5D=1&ArticleSearch%5Bwithin%5D%5Bauthorlast%5D=1&ArticleSearch%5Bq%5D=education&JelClass%5Bvalue%5D=0&journal=&from=a&page=5&per-page=21&from=j -->
-
-
 # Introduction
-
-<!-- You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point).  -->
 
 <!-- Background / Broader Context -->
 Birth rate is the number of live births per thousand in the population by year [@dict]. Birth rate is important since it is an indicator of population growth and determines the age structure of populations, which has various implications for the economy and society [@CLELAND2008364]. When the birth rate is too high or low, it affects all subgroups of the population in different ways, for example, a large number of new births will be a burden on the adult population to support them, and when this group ages to be elderly they will be a burden on governments to support them [@CLELAND2008364].
@@ -53,10 +45,6 @@ We replicate the paper by @og with a focus on the following research questions:
 * How do the birth rates vary for different cohorts of mothers by their birth year?
 
 While the original paper used Stata [@citeStata] for data processing and analysis in its replication package, we use R [@citeR] for all data wrangling and analysis and R packages tidyverse [@tidy], ggthemes [@ggthemes], ggprism [@ggprism] and patchwork [@patchwork] to produce the figures, kableExtra [@kableExtra] to produce the tables and haven [@haven] to read the dta files.
-
-
-<!-- https://www.sciencedirect.com/science/article/pii/B9780123739605004731 -->
-<!-- https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-020-8331-7 -->
 
 # Data
 
@@ -485,23 +473,6 @@ Therefore, the influence of technology and mass media that comes with it as well
 
 Back to Figure 1, we noted that the first time the birth rate dipped below minimum from previous years was in 2011, which, upon reflection after our discussion, is almost exactly 20 years after the commercial dial up internet became available and the third wave feminist movement began. 2012 is the year when the birth cohort 1988-1992 was ages 20-24, which is the first cohort to pull away significantly in birth rates to the previous ones. So are these other historical events indirectly responsible for the persistent decline in birth rates by influencing women's attitudes, and not the Great Recession? This is left as food for thought for now, more research would be needed to investigate this question.
 
-
-<!-- https://www.statista.com/statistics/236360/undergraduate-enrollment-in-us-by-gender/ -->
-<!-- https://www.pewresearch.org/politics/2015/09/03/most-millennials-resist-the-millennial-label/9-2-2015_05/ -->
-<!-- https://www.theguardian.com/world/2016/mar/15/millennials-work-five-stereotypes-generation-y-jobs -->
-<!-- https://www.forbes.com/sites/ashleystahl/2020/05/01/new-study-millennial-women-are-delaying-having-children-due-to-their-careers/?sh=c485e9f276ad -->
-<!-- https://www.vox.com/2018/3/20/16955588/feminism-waves-explained-first-second-third-fourth -->
-<!-- https://ourworldindata.org/fertility-rate -->
-<!-- https://public.tableau.com/views/WorldDemographicsAnimated-LifeExpectancyvsFertilityRate/WorldDemographicsStoryline?:embed=y&:showVizHome=no&:display_count=y&:display_static_image=y&:bootstrapWhenNotified=true -->
-
-<!-- https://www.nytimes.com/2021/06/27/opinion/falling-birthrate-women-babies.html -->
-<!-- https://thefederalist.com/2018/10/02/low-birth-rates-parallel-not-just-economy-also-waves-feminism/ -->
-<!-- https://unherd.com/2020/03/why-arent-women-having-more-babies/ -->
-
-<!-- https://thenextweb.com/news/20-years-ago-today-the-world-wide-web-opened-to-the-public -->
-<!-- https://www.forbes.com/sites/forbesbusinessdevelopmentcouncil/2020/10/14/recognizing-the-technological-revolution-and-preparing-for-the-next-economy/?sh=38724be83965 -->
-<!-- https://en.wikipedia.org/wiki/Technological_revolution -->
-
 # Conclusion
 
 We explored the trend in birth rates in the US for the period 1980-2020 among the total child-bearing population, and demographic subgroups by age, race and ethnicity, marital status and level of education. Overall there is a decline, but the trend oftentimes remains constant for different subgroups and only declines significantly for specific groups such as younger age groups, Hispanic women and women with no highschool degree after 2007. The original paper by @og uses the Great Recession as the event to mark the beginning of the birth rate decline, but although we acknowledge some effect of the recession on decreasing birth rates, we conjecture that the lasting and continuous decline is greater explained by the shifing attitudes towards when and if to have children in the new generation, and that the decline would have been evident even if the recession had not occurred. However, if women are simply choosing to have children later and not to not have children at all, we should expect a pick back up in the birth rates in the coming decade as this group ages.
@@ -509,27 +480,6 @@ We explored the trend in birth rates in the US for the period 1980-2020 among th
 ## Weaknesses and next steps
 
 A weakness is that we only described a subset of the demographic variables that were presented in @og's paper and so the analysis could have been more complete. I do not claim to be an expert on the technlogical revolution or feminism, and we only provided these themes as potential explanatory factors for the change in attitude that is causing the decline in birth rates. More research into how these variables correlate with the different generational groups or birth cohorts is needed to make stronger statistical claims, such as by collecting data on women's beliefs and possibly constructing regression models if appropriate.
-
-\newpage
-
-<!-- \appendix -->
-
-<!-- # Appendix {-} -->
-
-<!-- https://www.census.gov/content/dam/Census/library/visualizations/time-series/demo/families-and-households/ms-2.pdf -->
-<!-- https://www.businessinsider.com/what-caused-the-great-recession -->
-<!-- https://irle.berkeley.edu/what-really-caused-the-great-recession/ -->
-<!-- https://www.pewresearch.org/fact-tank/2018/05/04/more-than-a-million-millennials-are-becoming-moms-each-year/ -->
-<!-- https://www.pewresearch.org/hispanic/2015/09/28/modern-immigration-wave-brings-59-million-to-u-s-driving-population-growth-and-change-through-2065/ -->
-<!-- https://www.pewresearch.org/social-trends/2018/11/15/early-benchmarks-show-post-millennials-on-track-to-be-most-diverse-best-educated-generation-yet/ -->
-<!-- https://www.pewresearch.org/fact-tank/2019/01/17/where-millennials-end-and-generation-z-begins/ -->
-<!-- https://www.vox.com/2018/3/20/16955588/feminism-waves-explained-first-second-third-fourth -->
-<!-- https://history.house.gov/Exhibitions-and-Publications/WIC/Historical-Essays/Assembling-Amplifying-Ascending/Women-Decade/ -->
-<!-- https://www.jstor.org/stable/2991756?seq=1#metadata_info_tab_contents -->
-<!-- https://www.jstor.org/stable/10.1086/588436?seq=3#metadata_info_tab_contents -->
-<!-- https://stfc.ukri.org/files/digital-revolution-infographic/ -->
-<!-- https://www.doi2bib.org/bib/10.1086/588436 -->
-
 
 \newpage
 

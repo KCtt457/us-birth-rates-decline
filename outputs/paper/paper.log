@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  28 FEB 2022 01:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  28 FEB 2022 01:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -782,26 +782,26 @@ licate ignored
                                                   \__shipout_drop_firstpage_...
 l.264 
        <./paper_files/figure-latex/cohorttab-1.pdf>] [7] [8]
-Underfull \hbox (badness 3872) in paragraph at lines 328--330
+Underfull \hbox (badness 3872) in paragraph at lines 326--328
 \T1/lmr/m/n/10 Re-search Cen-ter. []$https : / / www . pewresearch . org / fact
  -[] tank / 2019 / 01 / 17 / where -[] millennials -[] end -[] and -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--339
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 \T1/lmr/m/n/10 social -[] trends / 2018 / 11 / 15 / early -[] benchmarks -[] sh
 ow -[] post -[] millennials -[] on -[] track -[] to -[] be -[] most -[] diverse
  -[] best -[]
  []
 
 [9]
-Underfull \hbox (badness 1502) in paragraph at lines 376--378
+Underfull \hbox (badness 1502) in paragraph at lines 374--376
 [][]\T1/lmr/m/n/10 Oxford Ad-vanced Amer-i-can Dic-tio-nary. 2022. \T1/lmr/m/it
 /10 Birth Rate\T1/lmr/m/n/10 . Ox-ford Uni-ver-sity Press. []$https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--408
+Underfull \hbox (badness 10000) in paragraph at lines 404--406
 \T1/lmr/m/n/10 census . gov / content / dam / Census / library / visualizations
  / time -[] series / demo / families -[] and -[] households / ms -[]
  []

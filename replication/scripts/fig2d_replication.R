@@ -16,7 +16,7 @@ library(ggthemes)
 fig_2_data <- read_csv("inputs/data/figs_1_2_3.csv")
 
 # Data wrangling
-fig_2d_data <- birth_data %>%
+fig_2d_data <- fig_2_data %>%
   select(year, brate_hsdropout, brate_hsgrad, brate_somecol, brate_colgrad) %>%
   pivot_longer(-c(year), names_to = "education", values_to = "brate") %>%
   filter(year > 1989)

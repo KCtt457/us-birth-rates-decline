@@ -16,7 +16,7 @@ library(ggthemes)
 fig_2_data <- read_csv("inputs/data/figs_1_2_3.csv")
 
 # Data wrangling
-fig_2e_data <- birth_data %>%
+fig_2e_data <- fig_2_data %>%
   select(year, brate_unmarried, brate_married) %>%
   pivot_longer(-c(year), names_to = "marriage_status", values_to = "brate")
 
