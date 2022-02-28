@@ -39,7 +39,7 @@ replication
 
 ## Reproducibility
 
-Download the project and open the R project us-birth-rates.Rproj in R Studio.
+Download all files and open the R project us-birth-rates.Rproj in R Studio.
 
 To reproduce the paper, knit to pdf paper.Rmd found at outputs/paper/paper.Rmd.
 
