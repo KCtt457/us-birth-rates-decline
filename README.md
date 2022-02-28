@@ -3,6 +3,7 @@
 This repo contains the code and data to produce 1) a paper which is a reproduction of [Kearney, Levine and Pardue (2022) 's paper, "The Puzzle of Falling US Birth Rates since the Great Recession"](https://www.aeaweb.org/articles?id=10.1257/jep.36.1.151) and 2) replications of the figures 1, 2a, 2b, 2d, 2e and 5 of this paper. 
 
 It is organised as follows:
+
 inputs
 - data - contains all the data files to be used for analysis and in the tables and figures.
   - agecomp-seer.dta 
@@ -12,11 +13,13 @@ inputs
   - nchs_cohort_analysis.dta.
 - literature
   - jep.36.1.151.pdf - the original paper that we reproduce.
+
 outputs
 - paper
   - paper.pdf - the reproduction paper
   - paper.Rmd - R markdown file to produce paper.pdf
   - references.bib - reference list for paper.pdf
+
 replication
 - plots - stores the replicated figures.
   - figure1.png
