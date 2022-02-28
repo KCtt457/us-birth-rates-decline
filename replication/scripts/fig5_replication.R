@@ -5,9 +5,6 @@
 # Contact: kimlin.chin@mail.utoronto.ca
 # License: MIT
 
-# Cannot be replicated :(
-
-
 #### Workspace setup ####
 library(haven)
 library(tidyverse)
@@ -17,6 +14,7 @@ library(ggthemes)
 fig5_birth_data <- read_dta("inputs/data/nchs_cohort_analysis.dta")
 fig5_pop_data <- read_dta("inputs/data/agecomp-seer.dta")
 
+# Data Wrangling
 fig5_pop_data1 <- fig5_pop_data %>%
   select(1:32) %>%
   select(-c(stname)) %>%
@@ -36,13 +34,14 @@ fig5_pop_data1 <- fig5_pop_data1 %>%
                              cohort >= 1988 & cohort <=1992 ~ 5,
                              cohort >= 1993 & cohort <=1997 ~ 6))
 
-fig5_pop_data1 <- na.omit(fig5_pop_data1)
+fig5_pop_data1 <- na.omit(fig5_pop_data1) # remove missing values
+
 fig5_pop_data1 <- fig5_pop_data1 %>%
   group_by(cohort2, mage) %>%
-  summarise(pop = sum(pop))
+  summarise(pop = sum(pop)) # aggregate by mother's age and cohort
 
 
-# Process data
+# Join population and birth data
 fig5_data <- right_join(fig5_birth_data, fig5_pop_data1, by=c("mage", "cohort2")) %>%
   mutate(brate=numbirth/pop*1000,
          age_20_24_year = case_when(cohort2 == 1 ~ 1992,

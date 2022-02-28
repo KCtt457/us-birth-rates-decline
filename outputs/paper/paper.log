@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  27 FEB 2022 23:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  28 FEB 2022 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,7 +725,7 @@ l.218
                                                   \__shipout_drop_firstpage_...
 l.218 
       ]
-<paper_files/figure-latex/fig1-1.pdf, id=48, 469.755pt x 325.215pt>
+<paper_files/figure-latex/fig1-1.pdf, id=47, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/fig1-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig1-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig1-1.pdf  used on input lin
@@ -736,7 +736,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--220
 [][]
  []
 
-<paper_files/figure-latex/demgraphs-1.pdf, id=50, 469.755pt x 325.215pt>
+<paper_files/figure-latex/demgraphs-1.pdf, id=49, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/demgraphs-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/demgraphs-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/demgraphs-1.pdf  used on inpu
@@ -756,7 +756,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.239 
        <./paper_files/figure-latex/fig1-1.pdf>]
-<paper_files/figure-latex/cohorttab-1.pdf, id=64, 469.755pt x 325.215pt>
+<paper_files/figure-latex/cohorttab-1.pdf, id=63, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/cohorttab-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/cohorttab-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/cohorttab-1.pdf  used on inpu
@@ -782,35 +782,35 @@ licate ignored
                                                   \__shipout_drop_firstpage_...
 l.264 
        <./paper_files/figure-latex/cohorttab-1.pdf>] [7] [8]
-Underfull \hbox (badness 3872) in paragraph at lines 322--324
+Underfull \hbox (badness 3872) in paragraph at lines 328--330
 \T1/lmr/m/n/10 Re-search Cen-ter. []$https : / / www . pewresearch . org / fact
  -[] tank / 2019 / 01 / 17 / where -[] millennials -[] end -[] and -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--333
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 \T1/lmr/m/n/10 social -[] trends / 2018 / 11 / 15 / early -[] benchmarks -[] sh
 ow -[] post -[] millennials -[] on -[] track -[] to -[] be -[] most -[] diverse
  -[] best -[]
  []
 
 [9]
-Underfull \hbox (badness 1502) in paragraph at lines 370--372
+Underfull \hbox (badness 1502) in paragraph at lines 376--378
 [][]\T1/lmr/m/n/10 Oxford Ad-vanced Amer-i-can Dic-tio-nary. 2022. \T1/lmr/m/it
 /10 Birth Rate\T1/lmr/m/n/10 . Ox-ford Uni-ver-sity Press. []$https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--399
+Underfull \hbox (badness 10000) in paragraph at lines 406--408
 \T1/lmr/m/n/10 census . gov / content / dam / Census / library / visualizations
  / time -[] series / demo / families -[] and -[] households / ms -[]
  []
 
 [10] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 13088 strings out of 480236
- 208803 string characters out of 5894214
- 506514 words of memory out of 5000000
+ 13094 strings out of 480236
+ 208870 string characters out of 5894214
+ 506455 words of memory out of 5000000
  30706 multiletter control sequences out of 15000+600000
  533032 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -827,10 +827,10 @@ yTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/chink/AppData/Roaming/
 TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/chink/AppData/Roami
 ng/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/chink/AppData/Ro
 aming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (10 pages, 290718 bytes).
+Output written on paper.pdf (10 pages, 291696 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
  144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

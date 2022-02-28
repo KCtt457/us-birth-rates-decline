@@ -2,8 +2,8 @@
 title: "Declining Birth rates in the US: An Analysis of Potential Factors"
 subtitle: "Reproduction of 'The Puzzle of Falling US Birth Rates since the Great Recession' (Kearney, Levine & Pardue, 2022)"
 author: Kimlin Chin
-thanks: "Code and data are available at: https://github.com/KCtt457/us-birth-rates-decline. A replication of various aspects in this paper are available at: https://www.socialsciencereproduction.org/reproductions/a5fd3a5f-e295-4061-a7ba-60e52338d110/index"
-date: "`r format(Sys.time(), '%d %B %Y')`"
+thanks: "Code and data are available at: https://github.com/KCtt457/us-birth-rates-decline. A replication of various aspects in this paper are available at: https://doi.org/10.48152/ssrp-srs6-t802"
+date: "27 February 2022"
 abstract: "Over the past 10 years, US birth rates have been dropping steadily to an all time low of 55.8 per 1,000 women in 2020. Kearney, Levine and Pardue (2022) analyzed this phenomenon by exploring demographic, economic, social and policy factors to little enlightenment of the cause of the decline. However, they did discover a correlation between the decline and the birth cohorts of mothers, and offer the conjecture of shifting priorities as the reasoning. We replicate the results of this study with respect to the demographic and cohort effects, and discuss alternative interpretations of the data considering the impact of the feminist movement and the evolution of technology and media. The results were consistent with the initial study."
 output:
   bookdown::pdf_document2
@@ -18,7 +18,6 @@ knitr::opts_chunk$set(fig.pos = "h", out.extra = "")
 library(tidyverse)
 library(haven)
 library(kableExtra)
-library(palmerpenguins)
 library(ggprism)
 library(ggthemes)
 library(patchwork)
@@ -53,7 +52,7 @@ We replicate the paper by @og with a focus on the following research questions:
 * How does the trend in birth rates vary with demographic factors such as age, race, education and marital status?
 * How do the birth rates vary for different cohorts of mothers by their birth year?
 
-While the original paper used Stata [@citeStata] for data processing and analysis in its replication package, we use R [@citeR] for all data wrangling and analysis.
+While the original paper used Stata [@citeStata] for data processing and analysis in its replication package, we use R [@citeR] for all data wrangling and analysis and R packages tidyverse [@tidy], ggthemes [@ggthemes], ggprism [@ggprism] and patchwork [@patchwork] to produce the figures, kableExtra [@kableExtra] to produce the tables and haven [@haven] to read the dta files.
 
 
 <!-- https://www.sciencedirect.com/science/article/pii/B9780123739605004731 -->
