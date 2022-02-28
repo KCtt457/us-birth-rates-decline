@@ -15,6 +15,7 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(fig.pos = "h", out.extra = "")
 
+# Load libraries
 library(tidyverse)
 library(haven)
 library(kableExtra)
@@ -24,7 +25,6 @@ library(patchwork)
 
 # Read in data
 birth_data <- read_csv(here::here("inputs/data/figs_1_2_3.csv"))
-
 birth_cohort_data <- read_dta(here::here("inputs/data/nchs_cohort_analysis.dta"))
 pop_cohort_data <- read_dta(here::here("inputs/data/agecomp-seer.dta"))
 ```
@@ -59,6 +59,7 @@ Single-age population counts, among all races from 1969-2019 and by race and His
 The birth data consists of variables for the year, and birth rates for each population subgroup. For example, for race there are 3 variables: birth rate for whites, birth rate for blacks and birth rate for hispanics. There is birth rate data for 4 population subgroups - age (5-year groupings), race and ethnicity, marital status and mother's level of education. We show a glimpse of the data with variables for race and marital status in table \@ref(tab:birthdata).
 
 ```{r birthdata, echo=FALSE}
+# Makes table of Ten rows of the birth rate data for years 1980-2020
 birth_data %>%
   select(year, brate_all, brate_whitenh, brate_blacknh, brate_hisp, brate_unmarried, brate_married) %>%
   filter(year > 1989) %>%
@@ -77,6 +78,7 @@ For the aggregated cohort birth data, the variables are mother's age, birth coho
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Process population data to aggregate by cohort
 fig5_pop_data1 <- pop_cohort_data %>%
   select(1:32) %>%
   select(-c(stname)) %>%
@@ -101,6 +103,7 @@ fig5_pop_data1 <- fig5_pop_data1 %>%
   group_by(cohort2, mage) %>%
   summarise(pop = sum(pop))
 
+# Join dataframes for population and birth data
 birth_cohort_data <- full_join(birth_cohort_data, fig5_pop_data1, by=c("mage", "cohort2")) %>%
   mutate(cohort_years = case_when(cohort2 == 1 ~ "1968-1972",
                                   cohort2 == 2 ~ "1973-1977",
@@ -113,6 +116,7 @@ birth_cohort_data <- full_join(birth_cohort_data, fig5_pop_data1, by=c("mage", "
 
 
 ```{r birthcohort, echo=FALSE}
+# Make table of First ten rows of the birth cohort data for 6 birth cohorts
 birth_cohort_data %>%
   select(2,6,1,3,4,5) %>%
   slice(1:10) %>%
@@ -134,6 +138,7 @@ birth_cohort_data %>%
 Figure \@ref(fig:fig1) is a replication of Figure 1 in the original paper, and it shows the trend in US birth rates for women ages 15-44. Between 1980 and 2007, the birth rates generally remained between 65-70 births per 1,000 women ages 15-44, with a minimum rate of 63.6 in 1997 and a maximum rate of 70.9 in 1990. The grey dashed lines mark the years of past recessions [@recessions], where we generally see a pattern of decline followed by an uptick in birth rates. After the Great Recession of 2007 however, there was a steady decline, diving below its past minimum rate from 1997 with a birth rate of 63.2 in 2011, and no resurgence so far. The lowest birth rate on the graph occurs in 2020 with 55.8 births per 1,000 women, which is a steep drop of 2.5 from the previous year.
 
 ```{r fig1, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Trend in US Birth Rates"}
+# Figure 1 replication
 birth_data %>%
   ggplot(aes(x = year,
              y = brate_all)) +
@@ -217,7 +222,7 @@ fig_2d_data <- birth_data %>%
 
 
 ```{r demgraphs, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Trends in Birth Rates by Population Subgroup"}
-
+# Make Figure 2a (replication of Figure 2a)
 fig2a <- fig_2a_data %>%
   ggplot(aes(x = year,
              y = brate,
@@ -260,6 +265,7 @@ fig2a <- fig_2a_data %>%
     y = "Births per 1,000 women in\n relevant population subgroup"
   )
 
+# Make Figure 2b (replication of Figure 2b)
 fig2b <- fig_2b_data %>%
   ggplot(aes(x = year,
              y = brate,
@@ -299,6 +305,7 @@ fig2b <- fig_2b_data %>%
     y = ""
   )
 
+# Make Figure 2c (replication of Figure 2e)
 fig2e <- fig_2e_data %>%
   ggplot(aes(x = year,
              y = brate,
@@ -338,6 +345,7 @@ fig2e <- fig_2e_data %>%
   )
 
 
+# Make Figure 2d (replication of Figure 2d)
 fig2d <- fig_2d_data %>%
   ggplot(aes(x = year,
              y = brate,
@@ -380,6 +388,7 @@ fig2d <- fig_2d_data %>%
     status are gathered from CDC Vital Statistics Births Reports."
   )
 
+# Layout plots 2x2
 (fig2a + fig2b) / (fig2e + fig2d)
 ```
 
@@ -396,6 +405,7 @@ Plot D shows the trend in birth rates over the period 1980-2020 for different le
 To obtain the children ever born, we first calculated the birth rate by dividing the number of births by the population count and then used these values to calculate the cumulative birth rate for each cohort. We then plot the cumulative birth rate against the mother's age, shown in Figure \@ref(fig:cohorttab) which is a replication of Figure 5 of the original paper. The cumulative birth rates for the 3 earlier cohorts are more similar to each other than the 3 later cohorts, with the most recent cohort showing the lowest number of children ever born.
 
 ```{r cohorttab, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Children Ever Born by Mother’s Age and Birth Cohort"}
+# Calculate birth rates
 birth_cohort_data <- birth_cohort_data %>%
   mutate(brate=numbirth/pop*1000,
          age_20_24_year = case_when(cohort2 == 1 ~ 1992,
@@ -406,6 +416,7 @@ birth_cohort_data <- birth_cohort_data %>%
                                     cohort2 == 6 ~ 2017)
          )
 
+# Calculate cumulative birth rates for each cohort
 birth_cohort_data <- birth_cohort_data %>%
   group_by(cohort2) %>%
   mutate(cum_brate = cumsum(brate)/1000, 
@@ -415,6 +426,7 @@ birth_cohort_data <- birth_cohort_data %>%
                                   cohort2 == 4 ~ "1983-1987",
                                   cohort2 == 5 ~ "1988-1992",
                                   cohort2 == 6 ~ "1993-1997")) 
+# Make plot (Figure 5 replication)
 birth_cohort_data %>%
   ggplot(aes(x = mage,
              y = cum_brate,
