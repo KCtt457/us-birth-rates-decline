@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Figure 2a replication
+# Purpose: Figure 2e replication
 # Author: Kimlin Chin
 # Date: 22 February 2022
 # Contact: kimlin.chin@mail.utoronto.ca
@@ -13,18 +13,18 @@ library(ggprism)
 library(ggthemes)
 
 # Read in the raw data. 
-fig_2_data <- read_csv("inputs/data/figs_2a_2b.csv")
+fig_2_data <- read_csv("inputs/data/figs_1_2_3.csv")
 
 # Data wrangling
-fig_2a_data <- fig_2_data %>%
-  select(-c(brate_whitenh, brate_blacknh, brate_hisp)) %>%
-  pivot_longer(-c(year), names_to = "age_group", values_to = "brate")
+fig_2e_data <- birth_data %>%
+  select(year, brate_unmarried, brate_married) %>%
+  pivot_longer(-c(year), names_to = "marriage_status", values_to = "brate")
 
 # Make plot
-fig_2a_data %>%
+fig_2e_data %>%
   ggplot(aes(x = year,
              y = brate,
-             color = age_group)) +
+             color = marriage_status)) +
   geom_line() +
   geom_vline(xintercept = 2007,
              linetype = "dashed",
@@ -51,24 +51,21 @@ fig_2a_data %>%
     label = "2007",
     color = "#000000"
   ) +
-  geom_text(aes(x = 1985, y = 125), label = "Age 25-29", color = "#000000") +
-  geom_text(aes(x = 1985, y = 100), label = "Age 20-24", color = "#000000") +
-  geom_text(aes(x = 1985, y = 80), label = "Age 30-34", color = "#000000") +
-  geom_text(aes(x = 1985, y = 60), label = "Age 15-19", color = "#000000") +
-  geom_text(aes(x = 1985, y = 30), label = "Age 35-39", color = "#000000") +
-  geom_text(aes(x = 1985, y = 10), label = "Age 40-44", color = "#000000") +
+  geom_text(aes(x = 1998, y = 100), label = "Married", color = "#000000") +
+  geom_text(aes(x = 1998, y = 50), label = "Unmarried", color = "#000000") +
   labs(
     title = "Trends in Birth Rates by Population Subgroup",
-    subtitle = "A: Five-year age group",
+    subtitle = "E: Marital Status (ages 15-44)",
     x = "",
     y = "Births per 1,000 women in\n relevant population subgroup",
     caption = "Source: Birth rates by age group, race and ethnicity, and marital 
     status are gathered from CDC Vital Statistics Births Reports."
   )
 
+
 # Save plot
 ggsave(
-  "outputs/plots/figure2a.png",
+  "replication/plots/figure2e.png",
   height = 100,
   width = 133.33,
   units = "mm",

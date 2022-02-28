@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Figure 2e replication
+# Purpose: Figure 2b replication
 # Author: Kimlin Chin
 # Date: 22 February 2022
 # Contact: kimlin.chin@mail.utoronto.ca
@@ -13,27 +13,28 @@ library(ggprism)
 library(ggthemes)
 
 # Read in the raw data. 
-fig_2_data <- read_csv("inputs/data/figs_1_2_3.csv")
+fig_2_data <- read_csv("inputs/data/figs_2a_2b.csv")
 
 # Data wrangling
-fig_2e_data <- birth_data %>%
-  select(year, brate_unmarried, brate_married) %>%
-  pivot_longer(-c(year), names_to = "marriage_status", values_to = "brate")
+fig_2b_data <- fig_2_data %>%
+  select(-c(brate_1519, brate_2024, brate_2529, brate_3034, brate_3539, brate_4044)) %>%
+  pivot_longer(-c(year), names_to = "race_eth", values_to = "brate") %>%
+  filter(year > 1989)
 
 # Make plot
-fig_2e_data %>%
+fig_2b_data %>%
   ggplot(aes(x = year,
              y = brate,
-             color = marriage_status)) +
+             color = race_eth)) +
   geom_line() +
   geom_vline(xintercept = 2007,
              linetype = "dashed",
              color = "darkgrey") +
   scale_x_continuous(
     guide = "prism_minor",
-    limits = c(1980, 2020),
-    breaks = seq(1980, 2020, by = 5),
-    minor_breaks = seq(1980, 2020, by = 1)
+    limits = c(1990, 2020),
+    breaks = seq(1990, 2020, by = 5),
+    minor_breaks = seq(1990, 2020, by = 1)
   ) +
   scale_y_continuous(limits = c(0, 140), breaks = seq(0, 140, by = 20)) +
   scale_color_tableau(palette = "Color Blind") +
@@ -51,21 +52,21 @@ fig_2e_data %>%
     label = "2007",
     color = "#000000"
   ) +
-  geom_text(aes(x = 1998, y = 100), label = "Married", color = "#000000") +
-  geom_text(aes(x = 1998, y = 50), label = "Unmarried", color = "#000000") +
+  geom_text(aes(x = 1995, y = 110), label = "Hispanic", color = "#000000") +
+  geom_text(aes(x = 1998, y = 85), label = "Black, non-Hispanic", color = "#000000") +
+  geom_text(aes(x = 1998, y = 50), label = "White, non-Hispanic", color = "#000000") +
   labs(
     title = "Trends in Birth Rates by Population Subgroup",
-    subtitle = "E: Marital Status (ages 15-44)",
+    subtitle = "B: Race and Ethnicity (ages 15-44)",
     x = "",
     y = "Births per 1,000 women in\n relevant population subgroup",
     caption = "Source: Birth rates by age group, race and ethnicity, and marital 
     status are gathered from CDC Vital Statistics Births Reports."
   )
 
-
 # Save plot
 ggsave(
-  "outputs/plots/figure2e.png",
+  "replication/plots/figure2b.png",
   height = 100,
   width = 133.33,
   units = "mm",

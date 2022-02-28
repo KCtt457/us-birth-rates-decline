@@ -80,7 +80,7 @@ fig1_data %>%
 
 # Save plot
 ggsave(
-  "outputs/plots/figure1.png",
+  "replication/plots/figure1.png",
   height = 100,
   width = 133.33,
   units = "mm",

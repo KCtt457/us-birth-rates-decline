@@ -16,7 +16,6 @@ library(ggthemes)
 # Read in the provided aggregated data. 
 fig5_birth_data <- read_dta("inputs/data/nchs_cohort_analysis.dta")
 fig5_pop_data <- read_dta("inputs/data/agecomp-seer.dta")
-# fig5_data_extra <- read_dta("inputs/data/nchs_births_pop_1990_2019.dta")
 
 fig5_pop_data1 <- fig5_pop_data %>%
   select(1:32) %>%
@@ -43,20 +42,6 @@ fig5_pop_data1 <- fig5_pop_data1 %>%
   summarise(pop = sum(pop))
 
 
-# fig5_pop_data1 <- fig5_pop_data %>%
-#   select(year, fem1519, fem2034, fem3544) %>%
-#   group_by(year) %>%
-#   summarise(fem1519 = sum(fem1519), fem2034 = sum(fem2034), fem3544 = sum(fem3544))
-
-# fig5_data <- fig5_data %>%
-#   mutate(cbrate = cum_birth/pop, cohort2 = as_factor(cohort2))
-# 
-# fig5_data %>%
-#   ggplot(aes(x = mage,
-#              y = cbrate/5,
-#              color = cohort2)) +
-#   geom_smooth()
-
 # Process data
 fig5_data <- right_join(fig5_birth_data, fig5_pop_data1, by=c("mage", "cohort2")) %>%
   mutate(brate=numbirth/pop*1000,
@@ -67,10 +52,6 @@ fig5_data <- right_join(fig5_birth_data, fig5_pop_data1, by=c("mage", "cohort2")
                                     cohort2 == 5 ~ 2012,
                                     cohort2 == 6 ~ 2017),
          cohort2 = as_factor(cohort2))
-
-# fig5_data <- fig5_data %>%
-#   group_by(cohort2) %>%
-#   summarise(cum_brate = sum(brate)/1000)
 
 fig5_data <- fig5_data %>%
   group_by(cohort2) %>%
@@ -105,7 +86,7 @@ fig5_data %>%
 
 # Save plot
 ggsave(
-  "outputs/plots/figure5.png",
+  "replication/plots/figure5.png",
   height = 100,
   width = 133.33,
   units = "mm",

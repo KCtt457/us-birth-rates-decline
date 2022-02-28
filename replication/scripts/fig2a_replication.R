@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Figure 2b replication
+# Purpose: Figure 2a replication
 # Author: Kimlin Chin
 # Date: 22 February 2022
 # Contact: kimlin.chin@mail.utoronto.ca
@@ -16,25 +16,24 @@ library(ggthemes)
 fig_2_data <- read_csv("inputs/data/figs_2a_2b.csv")
 
 # Data wrangling
-fig_2b_data <- fig_2_data %>%
-  select(-c(brate_1519, brate_2024, brate_2529, brate_3034, brate_3539, brate_4044)) %>%
-  pivot_longer(-c(year), names_to = "race_eth", values_to = "brate") %>%
-  filter(year > 1989)
+fig_2a_data <- fig_2_data %>%
+  select(-c(brate_whitenh, brate_blacknh, brate_hisp)) %>%
+  pivot_longer(-c(year), names_to = "age_group", values_to = "brate")
 
 # Make plot
-fig_2b_data %>%
+fig_2a_data %>%
   ggplot(aes(x = year,
              y = brate,
-             color = race_eth)) +
+             color = age_group)) +
   geom_line() +
   geom_vline(xintercept = 2007,
              linetype = "dashed",
              color = "darkgrey") +
   scale_x_continuous(
     guide = "prism_minor",
-    limits = c(1990, 2020),
-    breaks = seq(1990, 2020, by = 5),
-    minor_breaks = seq(1990, 2020, by = 1)
+    limits = c(1980, 2020),
+    breaks = seq(1980, 2020, by = 5),
+    minor_breaks = seq(1980, 2020, by = 1)
   ) +
   scale_y_continuous(limits = c(0, 140), breaks = seq(0, 140, by = 20)) +
   scale_color_tableau(palette = "Color Blind") +
@@ -52,12 +51,15 @@ fig_2b_data %>%
     label = "2007",
     color = "#000000"
   ) +
-  geom_text(aes(x = 1995, y = 110), label = "Hispanic", color = "#000000") +
-  geom_text(aes(x = 1998, y = 85), label = "Black, non-Hispanic", color = "#000000") +
-  geom_text(aes(x = 1998, y = 50), label = "White, non-Hispanic", color = "#000000") +
+  geom_text(aes(x = 1985, y = 125), label = "Age 25-29", color = "#000000") +
+  geom_text(aes(x = 1985, y = 100), label = "Age 20-24", color = "#000000") +
+  geom_text(aes(x = 1985, y = 80), label = "Age 30-34", color = "#000000") +
+  geom_text(aes(x = 1985, y = 60), label = "Age 15-19", color = "#000000") +
+  geom_text(aes(x = 1985, y = 30), label = "Age 35-39", color = "#000000") +
+  geom_text(aes(x = 1985, y = 10), label = "Age 40-44", color = "#000000") +
   labs(
     title = "Trends in Birth Rates by Population Subgroup",
-    subtitle = "B: Race and Ethnicity (ages 15-44)",
+    subtitle = "A: Five-year age group",
     x = "",
     y = "Births per 1,000 women in\n relevant population subgroup",
     caption = "Source: Birth rates by age group, race and ethnicity, and marital 
@@ -66,7 +68,7 @@ fig_2b_data %>%
 
 # Save plot
 ggsave(
-  "outputs/plots/figure2b.png",
+  "replication/plots/figure2a.png",
   height = 100,
   width = 133.33,
   units = "mm",
