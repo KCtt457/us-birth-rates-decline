@@ -3,7 +3,7 @@ title: "Declining Birth rates in the US: An Analysis of Potential Factors"
 subtitle: "Reproduction of 'The Puzzle of Falling US Birth Rates since the Great Recession' (Kearney, Levine & Pardue, 2022)"
 author: Kimlin Chin
 thanks: "Code and data are available at: https://github.com/KCtt457/us-birth-rates-decline. A replication of various aspects in this paper are available at: https://doi.org/10.48152/ssrp-srs6-t802"
-date: "27 February 2022"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "Over the past 10 years, US birth rates have been dropping steadily to an all time low of 55.8 per 1,000 women in 2020. Kearney, Levine and Pardue (2022) analyzed this phenomenon by exploring demographic, economic, social and policy factors to little enlightenment of the cause of the decline. However, they did discover a correlation between the decline and the birth cohorts of mothers, and offer the conjecture of shifting priorities as the reasoning. We replicate the results of this study with respect to the demographic and cohort effects, and discuss alternative interpretations of the data considering the impact of the feminist movement and the evolution of technology and media. The results were consistent with the initial study."
 output:
   bookdown::pdf_document2
