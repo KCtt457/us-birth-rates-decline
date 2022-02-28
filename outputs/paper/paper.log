@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  27 FEB 2022 03:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  27 FEB 2022 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -714,13 +714,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 x.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 169.
-[2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
-as been already used, duplicate ignored
+[2] [3pdfTeX warning (ext4): destination with the same identifier (name{table.1
+}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.188 
+l.218 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.218 
       ]
-<paper_files/figure-latex/fig1-1.pdf, id=37, 469.755pt x 325.215pt>
+<paper_files/figure-latex/fig1-1.pdf, id=49, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/fig1-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/fig1-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/fig1-1.pdf  used on input lin
@@ -731,10 +736,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--220
 [][]
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<paper_files/figure-latex/demgraphs-1.pdf, id=39, 469.755pt x 325.215pt>
+<paper_files/figure-latex/demgraphs-1.pdf, id=51, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/demgraphs-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/demgraphs-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/demgraphs-1.pdf  used on inpu
@@ -748,13 +750,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--229
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
-as been already used, duplicate ignored
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.244 
-      ]
-<paper_files/figure-latex/cohorttab-1.pdf, id=55, 469.755pt x 325.215pt>
+l.239 
+       <./paper_files/figure-latex/fig1-1.pdf>]
+<paper_files/figure-latex/cohorttab-1.pdf, id=65, 469.755pt x 325.215pt>
 File: paper_files/figure-latex/cohorttab-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/cohorttab-1.pdf>
 Package pdftex.def Info: paper_files/figure-latex/cohorttab-1.pdf  used on inpu
@@ -768,50 +770,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--246
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.259 F
-       or race and ethnicity, the birth rates for Black and White women rema...
- <./paper_files/figure-latex/fig1-1.pdf>] [5pdfTeX warning (ext4): destination 
-with the same identifier (name{figure.2}) has been already used, duplicate igno
-red
+l.258 
+       <./paper_files/figure-latex/demgraphs-1.pdf>] [6pdfTeX warning (ext4): d
+estination with the same identifier (name{figure.3}) has been already used, dup
+licate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.276 \newpage
-               <./paper_files/figure-latex/demgraphs-1.pdf>] [6pdfTeX warning (
-ext4): destination with the same identifier (name{figure.3}) has been already u
-sed, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.276 \newpage
-               <./paper_files/figure-latex/cohorttab-1.pdf>] [7] [8] (./paper.a
-ux) ) 
+l.265 T
+       hus across these demographic groups that we have examined, we note tw...
+ <./paper_files/figure-latex/cohorttab-1.pdf>] [7] [8] [9] [10] (./paper.aux) )
+ 
 Here is how much of TeX's memory you used:
- 13067 strings out of 480236
- 208384 string characters out of 5894214
- 500298 words of memory out of 5000000
- 30706 multiletter control sequences out of 15000+600000
+ 13080 strings out of 480236
+ 208693 string characters out of 5894214
+ 502572 words of memory out of 5000000
+ 30710 multiletter control sequences out of 15000+600000
  533032 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 74i,9n,77p,944b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-e
-c.enc}{c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
-ts1.enc}<c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/l
-m/lmbx12.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/pub
-lic/lm/lmbx9.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1
-/public/lm/lmr10.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/t
-ype1/public/lm/lmr12.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmr17.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist
-/fonts/type1/public/lm/lmr6.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-d
-ist/fonts/type1/public/lm/lmr8.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texm
-f-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/t
-exmf-dist/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (8 pages, 269713 bytes).
+ 74i,9n,77p,1465b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+}{c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.e
+nc}<c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmb
+x12.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/l
+m/lmbx9.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publ
+ic/lm/lmr10.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/
+public/lm/lmr12.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
+pe1/public/lm/lmr17.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/font
+s/type1/public/lm/lmr6.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dist/f
+onts/type1/public/lm/lmr8.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-dis
+t/fonts/type1/public/lm/lmr9.pfb><c:/Users/chink/AppData/Roaming/TinyTeX/texmf-
+dist/fonts/type1/public/lm/lmri10.pfb>
+Output written on paper.pdf (10 pages, 280963 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 160 words of extra memory for PDF output out of 10000 (max. 10000000)
 

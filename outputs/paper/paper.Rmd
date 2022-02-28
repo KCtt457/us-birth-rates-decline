@@ -2,7 +2,7 @@
 title: "Declining Birth rates in the US: An Analysis of Potential Factors"
 subtitle: "Reproduction of 'The Puzzle of Falling US Birth Rates since the Great Recession' (Kearney, Levine & Pardue, 2022)"
 author: Kimlin Chin
-thanks: "Code and data are available at: https://github.com/KCtt457/us-birth-rates-decline. A replication of various aspects in this paper are available at: "
+thanks: "Code and data are available at: https://github.com/KCtt457/us-birth-rates-decline. A replication of various aspects in this paper are available at: https://www.socialsciencereproduction.org/reproductions/a5fd3a5f-e295-4061-a7ba-60e52338d110/index"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "Over the past 10 years, US birth rates have been dropping steadily to an all time low of 55.8 per 1,000 women in 2020. Kearney, Levine and Pardue (2022) analyzed this phenomenon by exploring demographic, economic, social and policy factors to little avail in enlightenment. However, they did discover a correlation between the decline and the birth cohorts of mothers, and offer the conjecture of shifting priorities as the reasoning. We replicate the results of this study with respect to the demographic and cohort effects, and discuss alternative interpretations of the data considering the impact of the feminist movement and the evolution of technology and media. The results were consistent with the initial study."
 output:
@@ -402,7 +402,7 @@ Plot B shows the trend in birth rates over the period 1980-2020 for different ra
 
 Plot C shows the trend in birth rates over the period 1980-2020 for married vs unmarried mothers. Besides the small increase for unmarried women between 1980 and 1990, the trends do not demonstrate significant fluctuations in birth rates. The birth rate is higher for married mothers than unmarried mothers.
 
-Plot D shows the trend in birth rates over the period 1980-2020 for different levels of the mothers' education. The birth rates for highschool graduates, college graduates and mothers with some college education is in about the same range after 2007. Mothers with no highschool degree have the highest birthrate of the 4 education groups, and is the only group to show a decrease in this rate after 2007.
+Plot D shows the trend in birth rates over the period 1980-2020 for different levels of the mothers' education. The birth rates for highschool graduates, college graduates and mothers with some college education remains in about the same range after 2007. Mothers with no highschool degree have the highest birth rate of the 4 education groups, and the birth rate rises and falls around 2007 before stabilizing to pre-recession levels.
 
 ## Cohort effects
 
@@ -452,21 +452,40 @@ birth_cohort_data %>%
 
 # Discussion
 
-## Why is the birth rate declining?
+In Figure \@ref(fig:fig1), we saw that the birth rate enters a persistent decline after the Great Recession in 2007. However, one is left to wonder if this recession is really the event to demarcate this trend in birth rates, since it does not mirror the pattern of recessions prior.
 
-In Figure \@ref(fig:fig1), we saw that the birth rate enters a persistent decline after the Great Recession in 2007. However, one is left to wonder if this recession is really the event to demarcate this trend in birth rates, since it does not mirror the pattern of recessions prior. 
+## Why is the birth rate declining? - Demographic insights
 
-To investigate this idea more, we now turn to the trends among the various demographic subgroups. For the different age groups, the decreasing trend among younger age groups and increasing trend among older age groups points to the idea that women are choosing to have children later in life, an attitudinal change. Only the age 20-24 group seems to show a decrease at the 2007 mark that differs significantly from the years prior. One explanation is that it is the age when most people attend university, and more women are applying for tertiary education. In fact, the National Center for Education Statistics (NCES) data shows a 17.6% increase in undergraduate enrolment among females from 2007 to 2011 [(NCES, 2020)](https://nces.ed.gov/programs/digest/d20/tables/dt20_303.70.asp), which coincides perfectly with the 19.1% decrease in birth rates in the 4 years after the Great Recession began in 2007.
+To investigate this idea more, we first turn to the trends among the various demographic subgroups. For the different age groups, the decreasing trend among younger age groups and increasing trend among older age groups points to the idea that women are choosing to have children later in life, an attitudinal change. Only the age 20-24 group seems to show a decrease at the 2007 mark that differs significantly from the years prior. One explanation is that it is the age when most people attend university, and more women are applying for tertiary education and pursuing education before having children. In fact, the National Center for Education Statistics (NCES) data shows a 17.6% increase in undergraduate enrollment among females from 2007 to 2011 [(NCES, 2020)](https://nces.ed.gov/programs/digest/d20/tables/dt20_303.70.asp), which coincides perfectly with the 19.1% decrease in birth rates in the 4 years after the Great Recession began in 2007.
 
 For race and ethnicity, the birth rates for Black and White women remains fairly constant and only the Hispanic women show a significant decline in the years 2007-2011 before it plateaus to follow a similar trend to the other two races. @og offer assimilation as a possible explanation with evidence from Tavernise 2019, Parrado and Morgan (2008).
 
-For marital status, married and unmarried women have fairly unchanged birth rates around 2007. The small decrease in birth rates for unmarried women
+For marital status, married and unmarried women have fairly unchanged birth rates around 2007, so it does not appear to be affected too much by the recession or other events around this time. The small decrease in birth rates for unmarried women is possibly to the decline in teenage births (ages 15-19) that we saw in Figure \@ref(fig:demgraphs) plot A, since women are marrying later and therefore teenage women make up a larger proportion of the unmarried women population in their childbearing years [(US Census Bureau)](https://www.census.gov/content/dam/Census/library/visualizations/time-series/demo/families-and-households/ms-2.pdf).
 
-## 
+For education level, the groups do not appear to demonstrate any change in birth rates with the presence of the Great Recession, except for the no highschool degree group. Its rise and fall in birth rates may be related to the boom in the residential housing market leading up to the recession, where many subprime mortgages were given out, that is, loans to persons with low credit ratings, of which women with a lack of education i.e. no highschool degree would fall under [(Insider, 2021)](https://www.businessinsider.com/what-caused-the-great-recession). Thus, more women in this group may have chosen to buy homes and start families, and then the recession hit and reversed this effect.
 
-## Cohort effects - feminism, technological influence, media?
+Thus across these demographic groups that we have examined, we note two things: 1) the the declining trend in the total female population of childbearing age is not paralleled equally across its subgroups of age, race and ethnicity, marital status and education level, but 2) specifically we note that younger age groups, Hispanic women and women with no highschool degree showed a significant decrease in birth rates of which only the no highschool degree mamas seem to be related to the Great Recession. We did mention earlier however, that there seems to be an attitudinal change among the women close the recession - women having children later in life, getting married later, and more women attending colleges and universities - which leads into our discussion of cohort effects.
 
-From Figure \@ref(fig:cohorttab), it was shown that the birth cohorts in years 1968-1982 are quite similar to each other whereas the cohorts born in years 1983-1997 seemed to pull more away with lower birth rates compared to the predecessors. In fact, these two groupings of years define two generations respectively: Generation X and Generation Y, or the "Millenials" [(Pew Research Center, 2019)](https://www.pewresearch.org/fact-tank/2019/01/17/where-millennials-end-and-generation-z-begins/). Pew Research Center [(2019)](https://www.pewresearch.org/social-trends/2019/02/14/millennial-life-how-young-adulthood-today-compares-with-prior-generations-2/) conducted a study comparing various lifestyle factors such as education, income, family and housing to its prior generations and there is a stark difference.
+## Cohort effects - attitudes of a new generation
+
+From Figure \@ref(fig:cohorttab), it was shown that the birth cohorts in years 1968-1982 are quite similar to each other whereas the cohorts born in years 1983-1997 seemed to pull more away with lower birth rates compared to the predecessors. In fact, these two groupings of years define two distinct generations respectively: Generation X and Generation Y, or the "Millenials" [(Pew Research Center, 2019)](https://www.pewresearch.org/fact-tank/2019/01/17/where-millennials-end-and-generation-z-begins/). Pew Research Center [(2019)](https://www.pewresearch.org/social-trends/2019/02/14/millennial-life-how-young-adulthood-today-compares-with-prior-generations-2/) conducted a study comparing various lifestyle factors such as education, income, family and housing of Millenials to its prior generations and there are some stark differences. 
+
+Notably, women are delaying motherhood as according to the Pew Research Center analysis of the Census Bureau’s Current Population Survey data, 2016 saw 48% of Millennial women (ages 20 to 35 at the time) having given birth to at least one child compared to the previous generation where 57% of women were already moms in 2000 for the same age range [(Citation)](https://www.pewresearch.org/fact-tank/2018/05/04/more-than-a-million-millennials-are-becoming-moms-each-year/). The marriage status for millenials also shows similar figures with 46% of Millennial women ages 25 to 37 being married compared to 57% of Generation X-ers for the same age range [(Pew Research Center)](https://www.pewresearch.org/social-trends/2019/02/14/millennial-life-how-young-adulthood-today-compares-with-prior-generations-2/), and less millenial women are married for lower levels of education. Additionally, the generations are becoming more racially and ethnically diverse [(Pew Research Center)](https://www.pewresearch.org/social-trends/2018/11/15/early-benchmarks-show-post-millennials-on-track-to-be-most-diverse-best-educated-generation-yet/) with the population of Hispanics less likely to be foreign-born [@og]. These support our arguments for the change in birth rate trends for women of the different age groups, marital status and race and ethnicity that was discussed in the previous section.
+
+So it now begs the question, why are the attitudes between these two generations so different? We briefly touch on some historical events that surely would have influenced change in Generation Y. 
+
+## The Digital Revolution and Third Wave Feminism
+
+The birth years of the millenial generation were characterized by several milestones in the Digital Revolution: the first mobile phone (1984), digital camera (1988) and the world wide web (1989) [(Science & Technology Facilities Council)](https://stfc.ukri.org/files/digital-revolution-infographic/). When the first set of millenials would turn about 10 years old, CERN’s web browser software was released for public use (1991) and commercial dial up internet became available (1992). In their teenage years to follow, smartphones, social media and high speed internet would be developed creating a tech-savvy generation like never before.
+
+It also happens that Generation X coincides with the years of the second wave of feminism (1963 - 1980s) whereas the formative years of millenials coincide the years of the third wave of feminism [(Vox)](https://www.vox.com/2018/3/20/16955588/feminism-waves-explained-first-second-third-fourth). The third wave of the feminist movement began with the Anita Hill sexual harassment case in 1991, followed by the "Year of the Woman" in 1992 where a record-breaking number of women candidates were elected to the House of Representatives and Senate (@cawp, as cited in @Dolan1998, p. 272). The third wave of feminism attempts to be distinctive from its predecessor, with some claims in popular literature of it to have a culture of 'girl power', be more open-minded, more racially diverse and inclusive than the second wave, although it is disputed whether some of these claims are exaggerated [@Snyder2008].
+
+Therefore, the influence of technology and mass media that comes with it as well as the different ideologies behind feminism and women empowerment may have shaped the different attitudes we see between the more recent birth cohorts and older cohorts, and hence the decline in birth rates.
+
+## The decline not an effect of the Great Recession?
+
+Back to Figure 1, we noted that the first time the birth rate dipped below minimum from previous years was in 2011, which, upon reflection after our discussion, is almost exactly 20 years after the commercial dial up internet became available and the third wave feminist movement began. 2012 is the year when the birth cohort 1988-1992 was ages 20-24, which is the first cohort to pull away significantly in birth rates to the previous ones. So are these other historical events indirectly responsible for the decline in birth rates by influencing women's attitudes, and not the Great Recession? This is left as food for thought for now, more research would be needed to investigate this question.
+
 
 <!-- https://www.statista.com/statistics/236360/undergraduate-enrollment-in-us-by-gender/ -->
 <!-- https://www.pewresearch.org/politics/2015/09/03/most-millennials-resist-the-millennial-label/9-2-2015_05/ -->
@@ -484,16 +503,36 @@ From Figure \@ref(fig:cohorttab), it was shown that the birth cohorts in years 1
 <!-- https://www.forbes.com/sites/forbesbusinessdevelopmentcouncil/2020/10/14/recognizing-the-technological-revolution-and-preparing-for-the-next-economy/?sh=38724be83965 -->
 <!-- https://en.wikipedia.org/wiki/Technological_revolution -->
 
+# Conclusion
+
+We explored the trend in birth rates in the US for the period 1980-2020 among the total child-bearing population, and demographic subgroups by age, race and ethnicity, marital status and level of education. Overall there is a decline, but the trend oftentimes remains constant for different subgroups and only declines significantly for specific groups such as younger age groups, Hispanic women and women with no highschool degree after 2007. The original paper by @og uses the Great Recession as the event to mark the beginning of the birth rate decline, but although we acknowledge some effect of the recession on decreasing birth rates, we conjecture that the lasting and continuous decline is greater explained by the shifing attitudes towards when and if to have children in the new generation, and that the decline would have been evident even if the recession had not occurred. 
+
+<!-- With attitudes changing, how can we address the decreasing birth rates? -->
+However, if women are simply choosing to have children later and not to not have children at all, we should expect a pick back up in the birth rates in the coming decade.
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
+A weakness is that we only described a subset of the demographic variables that were presented in @og's paper and so the analysis could have been more complete. I do not claim to be an expert on the technlogical revolution or feminism, and we only provided these themes as potential explanatory factors for the change in attitude that is causing the decline in birth rates. More research into how these variables correlate with the different generational groups or birth cohorts is needed to make stronger statistical claims, such as by collecting data on women's beliefs.
 
 \newpage
 
 \appendix
 
 # Appendix {-}
+
+https://www.census.gov/content/dam/Census/library/visualizations/time-series/demo/families-and-households/ms-2.pdf
+https://www.businessinsider.com/what-caused-the-great-recession
+https://irle.berkeley.edu/what-really-caused-the-great-recession/
+https://www.pewresearch.org/fact-tank/2018/05/04/more-than-a-million-millennials-are-becoming-moms-each-year/
+https://www.pewresearch.org/hispanic/2015/09/28/modern-immigration-wave-brings-59-million-to-u-s-driving-population-growth-and-change-through-2065/
+https://www.pewresearch.org/social-trends/2018/11/15/early-benchmarks-show-post-millennials-on-track-to-be-most-diverse-best-educated-generation-yet/
+https://www.pewresearch.org/fact-tank/2019/01/17/where-millennials-end-and-generation-z-begins/
+https://www.vox.com/2018/3/20/16955588/feminism-waves-explained-first-second-third-fourth
+https://history.house.gov/Exhibitions-and-Publications/WIC/Historical-Essays/Assembling-Amplifying-Ascending/Women-Decade/
+https://www.jstor.org/stable/2991756?seq=1#metadata_info_tab_contents
+https://www.jstor.org/stable/10.1086/588436?seq=3#metadata_info_tab_contents
+https://stfc.ukri.org/files/digital-revolution-infographic/
+https://www.doi2bib.org/bib/10.1086/588436
 
 
 # Additional details
