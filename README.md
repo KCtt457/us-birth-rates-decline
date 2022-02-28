@@ -6,13 +6,13 @@ It is organised as follows:
 
 inputs
 - data - contains all the data files to be used for analysis and in the tables and figures.
-  - agecomp-seer.dta 
-  - fig_1.csv
-  - figs_1_2_3.csv
-  - figs_2a_2b.csv
-  - nchs_cohort_analysis.dta.
+  - agecomp-seer.dta - data for figure 5 
+  - fig_1.csv - data for figure 1
+  - figs_1_2_3.csv - data for figures 1, 2a, 2b, 2d, 2e
+  - figs_2a_2b.csv - data for figures 2a and 2b
+  - nchs_cohort_analysis.dta. - data for figure 5
 - literature
-  - jep.36.1.151.pdf - the original paper that we reproduce.
+  - jep.36.1.151.pdf - the original paper of which we make a reproduction.
 
 outputs
 - paper
@@ -36,7 +36,7 @@ replication
   - fig2e_replication.R
   - fig5_replication.R
 
-To reproduce the paper, run paper.Rmd found at outputs/paper/paper.Rmd.
+To reproduce the paper, knit to pdf paper.Rmd found at outputs/paper/paper.Rmd.
 
 To replicate a figure, run the corresponding R file stored in replication/scripts/fig{number}\_replication.R. The output will be saved as an image in replication/plots/figure{number}.png .
 
