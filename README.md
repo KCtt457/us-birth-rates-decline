@@ -36,6 +36,11 @@ replication
   - fig2e_replication.R
   - fig5_replication.R
 
+
+## Reproducibility
+
+Download the project and open the R project us-birth-rates.Rproj in R Studio.
+
 To reproduce the paper, knit to pdf paper.Rmd found at outputs/paper/paper.Rmd.
 
 To replicate a figure, run the corresponding R file stored in replication/scripts/fig{number}\_replication.R. The output will be saved as an image in replication/plots/figure{number}.png .
